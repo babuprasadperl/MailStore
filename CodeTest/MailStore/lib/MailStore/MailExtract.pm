@@ -205,12 +205,12 @@ sub handle_message {
             $storage->write_to_file( $contentType, $body );
         }
         #
-        # Step 8: Update the manifest file (mappings.yaml) file with
+        # Step 8: Update the manifest file (manifest.yaml) file with
         #         1) MessageId
         #         2) Stored path
         #
         $self->update_manifest($storage);
-        logger()->debug('Finished updating Manifest : mappings.yaml');
+        logger()->debug('Finished updating Manifest : manifest.yaml');
         return 1;
     }
     catch {
@@ -239,7 +239,7 @@ sub save_manifest {
     my $dumper = YAML::Dumper->new;
     $dumper->indent_width(4);
     my $yamlText = $dumper->dump( $self->{'manifest'} );
-    write_file( $self->{'storage'} . '/Mappings.yaml', $yamlText );
+    write_file( $self->{'storage'} . '/manifest.yaml', $yamlText );
     return 1;
 }
 
