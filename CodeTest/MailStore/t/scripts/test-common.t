@@ -26,7 +26,7 @@ ok( $config->getValue('save_text') eq 'body.txt',  'Save message with content-ty
 my $log = MailStore::Common::Logger->instance();
 isa_ok( $log, 'MailStore::Common::Logger' );
 ok( defined $log->{log_conf} == 1,                            'log file' );
-ok( MailStore::Common::Logger::logger()->info('hello') eq '', 'logging data' );
+ok( MailStore::Common::Logger::logger()->info('hello'), 'logging data' );
 
 # Testing completed
 done_testing();
