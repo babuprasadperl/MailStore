@@ -12,8 +12,7 @@ package MailStore;
 #  Author: Babu Prasad H P (babuprasad.perl@gmail.com)
 #------------------------------------------------------
 
-use strict;
-use warnings;
+use Moose;
 
 =head1 NAME
 

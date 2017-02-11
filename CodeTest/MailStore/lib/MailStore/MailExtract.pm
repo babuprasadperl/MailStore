@@ -9,7 +9,7 @@ package MailStore::MailExtract;
 #--------------------------------------------------------
 
 use Moose;
-use Data::Dumper;
+#use Data::Dumper;
 use Mail::Box::Manager;
 use Mail::Message::Body;
 use YAML::Dumper;
@@ -144,16 +144,7 @@ sub handle_message {
             return;
         }
         #
-        # Step 5: Serialize the message object in the message folder for Reporting
-        #
-        my $serialize_status = $storage->serialize_message($msg);
-        unless ($serialize_status) {
-            logger()->error("Could not serialize object : $messageId");
-            return;
-        }
-        logger()->debug('Object Serialize completed');
-        #
-        # Step 6: If Multi-part then handle differently
+        # Step 5: If Multi-part then handle differently
         #         You may have to split the message and
         #         then save in the tagret message folder
         #
@@ -173,8 +164,9 @@ sub handle_message {
                 # we can check if it is attachment or not based on 'content-disposition'
                 #
                 if ( $part->head->get('content-disposition') =~ /attachment/ ) {
-                    $attachment_count++;
-                    $storage->save_attachment( $part, $attachment_count );
+                    my $cnt = $attachment_count++;
+                    $msg->{'attachments'}->{$cnt} =
+                      $storage->save_attachment( $part, $attachment_count );
                     next;
                 }
                 #
@@ -182,7 +174,9 @@ sub handle_message {
                 # as either body.txt or body.html
                 #
                 if ( $contentType =~ /html|plain/i && $save_count == 0 ) {
-                    $storage->write_to_file( $part->get('Content-Type'), $part->body );
+                    $msg->{'main-file'} =
+                      $storage->write_to_file( $part->get('Content-Type'), $part->body );
+                    $msg->{'main-message'} = $part->body;
                     $save_count++;
                 }
                 #
@@ -190,27 +184,38 @@ sub handle_message {
                 # we are saving them irrespective of count
                 #
                 elsif ( $contentType !~ /html|plain/i ) {
-                    $attachment_count++;
-                    $storage->save_attachment( $part, $attachment_count );
+                    my $cnt = $attachment_count++;
+                    $msg->{'attachments'}->{$cnt} =
+                      $storage->save_attachment( $part, $attachment_count );
                 }
             }
         }
         #
-        # Step 7: Handle for non-multipart message
+        # Step 6: Handle for non-multipart message
         #
         else {
             #
             # Non-multipart save
             #
-            $storage->write_to_file( $contentType, $body );
+            $msg->{'main-file'} = $storage->write_to_file( $contentType, $body );
+            $msg->{'main-message'} = $body;
         }
         #
-        # Step 8: Update the manifest file (manifest.yaml) file with
+        # Step 7: Update the manifest file (manifest.yaml) file with
         #         1) MessageId
         #         2) Stored path
         #
         $self->update_manifest($storage);
         logger()->debug('Finished updating Manifest : manifest.yaml');
+        #
+        # Step 8: Serialize the message object in the message folder for Reporting
+        #
+        my $serialize_status = $storage->serialize_message($msg);
+        unless ($serialize_status) {
+            logger()->error("Could not serialize object : $messageId");
+            return;
+        }
+        logger()->debug('Object Serialize completed');
         return 1;
     }
     catch {

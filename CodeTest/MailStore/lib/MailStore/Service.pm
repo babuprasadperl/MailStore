@@ -15,7 +15,7 @@ package MailStore::Service;
 
 use Moose;
 
-use Data::Dumper;
+#use Data::Dumper;
 use Try::Tiny;
 
 # MailStore modules
@@ -80,7 +80,7 @@ sub run {
             storage => $storage_path
         );
         logger()->info('Service ended successfully');
-        logger()->info( '--------------------------------------------------------------' . "\n\n" );
+        logger()->info( '---------------------------------------------------------' . "\n\n" );
     }
     catch {
         logger()->error( 'Error occured in run : ' . $! .. "\n\n" );
@@ -107,6 +107,17 @@ sub get_message_data {
     my $report       = MailStore::Report->new( storage => $storage_path );
     my $messageDir   = $report->get_message_dir( $self->{'messageId'} );
     $report->print_report($messageDir);
+    return 1;
+}
+
+#
+# Gets the list of message's messageIds taken from stored manifest.yaml file
+#
+sub get_message_list {
+    my $self         = shift;
+    my $storage_path = $self->{config}->getValue('storage_path');
+    my $report       = MailStore::Report->new( storage => $storage_path );
+    $report->print_message_list();
     return 1;
 }
 

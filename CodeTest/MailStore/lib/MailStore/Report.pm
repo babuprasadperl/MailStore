@@ -10,12 +10,13 @@ package MailStore::Report;
 
 use Moose;
 
-use Data::Dumper;
+#use Data::Dumper;
 use Try::Tiny;
 use FindBin qw($Bin);
 use Storable;
 use File::Spec;
 use Carp;
+use YAML qw(LoadFile);
 
 # MailStore modules
 use MailStore;
@@ -74,14 +75,23 @@ sub print_report {
     #       Even I tried with Perl6::Form, but it is extensive and needs time to explore
     #       For time being this is the simple report display I have :-)
     #
+    print "\n\nPRINTING REPORT\n==============================\n";
     foreach my $key ( keys %{$objHash} ) {
         if ( ref( $objHash->{$key} ) eq 'ARRAY' ) {
-            print "$key --> @{$objHash->{$key}}\n" if $objHash->{$key}->[0];
+            print "$key : @{$objHash->{$key}}\n" if $objHash->{$key}->[0];
+        }
+        elsif ( ref( $objHash->{$key} ) eq 'HASH' ) {
+            print "\n$key\n----------------------------\n";
+            foreach my $part ( keys %{ $objHash->{$key} } ) {
+                print "$objHash->{$key}->{$part}\n";
+            }
+            print "\n";
         }
         else {
-            print "$key --> $objHash->{$key}\n" if $objHash->{$key};
+            print "$key : $objHash->{$key}\n" if $objHash->{$key};
         }
     }
+    print "\n----------------------------------\n";
     return;
 }
 
@@ -101,6 +111,19 @@ sub check_reachable {
     my ( $self, $folder ) = @_;
     return 1 if ( -d $folder );
     return 0;
+}
+
+#
+# Prints the list of messages present in manifest file
+#
+sub print_message_list {
+    my $self          = shift;
+    my $manifest_path = $self->{'storage'} . '/manifest.yaml';
+    my $tmp           = LoadFile($manifest_path);
+    print "\n\tMessageIds\n\t-------------------------\n";
+    map { print "\t" . $_->{'messageId'} . "\n" } @$tmp;
+    print "\t-------------------------\n";
+    return 1;
 }
 
 no Moose;

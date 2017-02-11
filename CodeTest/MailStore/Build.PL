@@ -36,7 +36,8 @@ my $build = Module::Build->new(
         'Moose::Role'         => '2.2004',
         'base'                => '2.23',
         'Config::Simple'      => '4.58',
-        'Carp'                => '1.40'
+        'Carp'                => '1.40',
+        'YAML'                => '1.21',
     },
 
     #

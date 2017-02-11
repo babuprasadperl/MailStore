@@ -10,7 +10,7 @@ package MailStore::Storage;
 #------------------------------------------------------------
 
 use Moose;
-use Data::Dumper;
+#use Data::Dumper;
 use Storable;
 use File::Slurp;
 use FindBin qw($Bin);
@@ -132,7 +132,6 @@ sub filter_message {
     my $obj;
 
     try {
-
         $obj->{from} = [ map { $_->format } $msg->from ];
         $obj->{to}   = [ map { $_->format } $msg->to ];
         $obj->{subject} = $msg->subject || 'unknown';
@@ -141,9 +140,11 @@ sub filter_message {
         $obj->{date} = $msg->head->get('Date') || 'Unknown';
         $obj->{sender} = [ map { $_->format } $msg->sender ];
         $obj->{contentType} = $msg->contentType || 'text/plain';
-        $obj->{content}     = $msg->lines       || 'unknown';
         $obj->{isNested} = $msg->isNested ? 'True' : 'False';
         $obj->{nrLines} = $msg->nrLines || 0;
+        $obj->{'Main_Message'}  = $msg->{'main-message'};
+        $obj->{'Main_filename'} = $msg->{'main-file'};
+        $obj->{'attachments'} = $msg->{'attachments'} if $msg->{'attachments'};
     }
     catch {
         logger()->error( 'Problem in message object filtering ' . $! );
@@ -173,20 +174,21 @@ sub serialize {
 #
 sub write_to_file {
     my ( $self, $contentType, $body ) = @_;
+    my $file;
 
     if ( $contentType =~ /html/i ) {
-        my $file = $self->{'folderName'} . '/' . $self->{'save_html'};
+        $file = $self->{'folderName'} . '/' . $self->{'save_html'};
         write_file( $file,
             { binmode => $self->{'storeFormat'}, perms => $self->{'storePermission'} }, $body );
         logger()->debug( 'Writing message body to file :' . $self->{'save_html'} );
     }
     else {
-        my $file = $self->{'folderName'} . '/' . $self->{'save_text'};
+        $file = $self->{'folderName'} . '/' . $self->{'save_text'};
         write_file( $file,
             { binmode => $self->{'storeFormat'}, perms => $self->{'storePermission'} }, $body );
         logger()->debug( 'Writing message body to file :' . $self->{'save_text'} );
     }
-    return 1;
+    return $file;
 }
 
 #
@@ -201,7 +203,7 @@ sub save_attachment {
     my $file = $self->{'folderName'} . '/' . $attachmentId;
     logger()->debug('Writing attachment to file ');
     write_file( $file, $part->body );
-    return;
+    return $attachmentId;
 }
 
 1;

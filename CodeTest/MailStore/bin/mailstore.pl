@@ -41,19 +41,26 @@ sub main {
     # now get user options
     GetOptions(
         'maildir=s'      => \$arg{maildir},
-        'show-message=s' => \$arg{messageId},
-        'show-dir=s'     => \$arg{messageDir},
+        'message-id=s'   => \$arg{messageId},
+        'dir-path=s'     => \$arg{messageDir},
+        'list'           => \$arg{listMessage},
         'help|?'         => \$arg{help},
     );
 
-    usage() if ( $arg{help} );
+    if ( $arg{help} ) {
+        usage();
+        return;
+    }
 
     print "\n" . 'Starting MailStore....' . "\n";
     my $service = MailStore::Service->new(%arg);
     #
     # Reporting purpose
     #
-    if ( $arg{messageDir} ) {
+    if ( $arg{listMessage} ) {
+        $service->get_message_list();
+    }
+    elsif ( $arg{messageDir} ) {
         $service->get_dir_data();
     }
     elsif ( $arg{messageId} ) {
@@ -89,8 +96,9 @@ Usage: mailstore [options]
 Options:
   --help                   - Get help
   --maildir        <dir>   - Base path for maildir directory 
-  --show-message   <id>    - Provide a messageId of the stored message
-  --show-dir       <dir>   - Provide the directory path of the stored message
+  --message-id     <id>    - Provide a messageId of the stored message
+  --dir-path       <dir>   - Provide the directory path of the stored message
+  --list                   - Lists the messages from the manifest file
 USAGE
     return;
 }
