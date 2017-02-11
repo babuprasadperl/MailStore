@@ -1,0 +1,5 @@
+Here is a test message with several attachments.
+ 
+-- 
+perl -le 'print (@) - $; +$ (- % _); * *+* *'
+ 

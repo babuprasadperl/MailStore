@@ -1,0 +1,23 @@
+digraph G {
+        rankdir=LR;
+        node [shape=record];
+    list_post [ label = "list_post |<id>  id | <mail> mail | <list> list "];
+    addressee [ label = "addressee | <id> id | <name> email_name | <address> email_address | <org> organisation "];
+    correspondent [ label = "correspondent | <id> id | <mail> mail | type | <addressee> addressee "];
+    email [ label = "email | <id> id | <address> address "];
+    embedded_url [ label = "embedded_url | <id> urlid | <mail> mail | uri "];
+    mail [ label = "mail | <id> id | messageid | message_date | index_date | subject | message" ];
+    mailing_list [ label = "mailing_list | <id> id | name "];
+    name_ [ label = "name | <id> id | <name> name "];
+    organisation [ label = "organisation | <id> id | name "];
+ 
+    list_post:mail -> mail:id;
+    list_post:list -> mailing_list:id;
+    correspondent:addressee -> addressee:id;
+    correspondent:mail -> mail:id;
+    addressee:address -> email:id;
+    addressee:name -> name_:id;
+    embedded_url:mail -> mail:id;
+}
+ 
+ 

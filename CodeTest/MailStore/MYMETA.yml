@@ -1,0 +1,59 @@
+---
+abstract: 'Messages extraction and storage toolkit'
+author:
+  - 'Babu Prasad <bprasadh@gmail.com>'
+build_requires: {}
+configure_requires:
+  File::Copy: '2.31'
+  File::Find: '1.34'
+  File::Path: 2.12_01
+  Module::Build: '0.4220'
+  strict: '1.11'
+  warnings: '1.36'
+dynamic_config: 0
+generated_by: 'Module::Build version 0.422, CPAN::Meta::Converter version 2.150005'
+license: gpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: MailStore
+provides:
+  MailStore:
+    file: lib/MailStore.pm
+    version: '1.00'
+  MailStore::Common::Config:
+    file: lib/MailStore/Common/Config.pm
+  MailStore::Common::Instance:
+    file: lib/MailStore/Common/Instance.pm
+  MailStore::Common::Logger:
+    file: lib/MailStore/Common/Logger.pm
+  MailStore::MailExtract:
+    file: lib/MailStore/MailExtract.pm
+  MailStore::Report:
+    file: lib/MailStore/Report.pm
+  MailStore::Service:
+    file: lib/MailStore/Service.pm
+  MailStore::Storage:
+    file: lib/MailStore/Storage.pm
+requires:
+  App::cpanminus: '1.7042'
+  Config::Simple: '4.58'
+  Data::Dumper: '2.161'
+  Exporter: '5.72'
+  File::Slurp: '9999.19'
+  File::Spec: '3.63'
+  FindBin: '1.51'
+  Log::Log4perl: '1.48'
+  Mail::Address: '2.18'
+  Mail::Box::Manager: '3.001'
+  Mail::Message::Body: '3.000'
+  Moose: '2.2004'
+  Moose::Role: '2.2004'
+  Storable: '2.56'
+  Try::Tiny: '0.28'
+  YAML::Dumper: '0'
+  base: '2.23'
+resources:
+  license: http://opensource.org/licenses/gpl-license.php
+version: '1.00'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'

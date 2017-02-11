@@ -1,0 +1,32 @@
+> I am new to this list so please forgive me if I am asking something that
+> has already been answered previously.  I did check the archives but too
+> no avail.
+> 
+> I need to create a postscript file from an HTML document.  I have no
+> problem here with the text but I do have a logo (gif file) on this
+> document which does not get converted.  How can I go about converting
+> the HTML documents I generate, along with any linked GIF images, to
+> PostScript, as well as at other times, to TIFF?
+> 
+> I would appreciate any feedback and help on this request.
+> 
+> Thanks in advance,
+> Mark
+ 
+You can convert .html to .ps using Netscape.  You can do this manually
+by clicking mouse, or through '-remote' command line option.  For
+example,
+    netscape -remote "openURL(http://sexybabes.for.you/)" \
+             -remote "saveAs(xxx.ps, Postscript)"
+ 
+You can then convert .ps to .tiff like FAX program does.
+ 
+William
+ 
+***********************************************************************
+To remove yourself from this mailing list, send mail to:
+        majordomo@wizards.dupont.com
+ 
+Include the following command in the body of your message:
+        unsubscribe magick
+***********************************************************************

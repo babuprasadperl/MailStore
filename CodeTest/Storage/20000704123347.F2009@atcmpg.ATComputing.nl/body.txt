@@ -1,0 +1,11 @@
+> Your bug report is available on the web at the URL
+> http://www.simplesystems.org/ImageMagick/bugs?findid=298    
+ 
+Both indicated problems are fixed in 5.2.1
+-- 
+               MarkOv       %-]
+ 
+------------------------------------------------------------------------
+drs Mark A.C.J. Overmeer                           markov@ATComputing.nl
+AT Computing, UNIX Training and Consultancy    http://www.ATComputing.nl
+http://www.dhp.nl/~markov/                         http://satfoto.dhp.nl

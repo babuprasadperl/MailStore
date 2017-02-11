@@ -1,0 +1,146 @@
+2017/02/11 13:34:04 - [ Logger.pm line 143) ] - INFO : Initializing logger
+2017/02/11 13:34:04 - [ Service.pm ] - INFO : Starting Service
+2017/02/11 13:34:04 - [ MailExtract.pm ] - DEBUG : Manager object is created
+2017/02/11 13:34:04 - [ MailExtract.pm ] - INFO : Mail folder ../../MailDir contains 5 messages
+2017/02/11 13:34:04 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:04 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:04 - [ Storage.pm ] - INFO : folder name :../../Storage/20000209154405.C265@better.net
+2017/02/11 13:34:04 - [ Storage.pm ] - DEBUG : Creating folder:20000209154405.C265@better.net
+2017/02/11 13:34:04 - [ Storage.pm ] - INFO : created folder :../../Storage/20000209154405.C265@better.net
+2017/02/11 13:34:04 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:04 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:04 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:04 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:04 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:04 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:09 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : folder name :../../Storage/20021210110736.GA32736@deep-dark-truthful-mirror.pad
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Creating folder:20021210110736.GA32736@deep-dark-truthful-mirror.pad
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : created folder :../../Storage/20021210110736.GA32736@deep-dark-truthful-mirror.pad
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-1
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-2
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-3
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-4
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:09 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : folder name :../../Storage/200002092200.RAA19561@mailfw3.ford.com
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Creating folder:200002092200.RAA19561@mailfw3.ford.com
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : created folder :../../Storage/200002092200.RAA19561@mailfw3.ford.com
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:09 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : folder name :../../Storage/20000704123347.F2009@atcmpg.ATComputing.nl
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Creating folder:20000704123347.F2009@atcmpg.ATComputing.nl
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : created folder :../../Storage/20000704123347.F2009@atcmpg.ATComputing.nl
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:09 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : folder name :../../Storage/20000807113844.A22119@atcmpg.ATComputing.nl
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Creating folder:20000807113844.A22119@atcmpg.ATComputing.nl
+2017/02/11 13:34:09 - [ Storage.pm ] - INFO : created folder :../../Storage/20000807113844.A22119@atcmpg.ATComputing.nl
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:09 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:09 - [ MailExtract.pm ] - INFO : All messages have been handled
+2017/02/11 13:34:09 - [ MailExtract.pm ] - ERROR : Error occured in init of maildir : 
+2017/02/11 13:34:09 - [ MailExtract.pm ] - DEBUG : Initalization complete: Object is ready
+2017/02/11 13:34:09 - [ Service.pm ] - INFO : Service ended successfully
+2017/02/11 13:34:09 - [ Service.pm ] - INFO : --------------------------------------------------------------
+
+2017/02/11 13:34:33 - [ Logger.pm line 143) ] - INFO : Initializing logger
+2017/02/11 13:34:33 - [ Service.pm ] - INFO : Starting Service
+2017/02/11 13:34:33 - [ MailExtract.pm ] - DEBUG : Manager object is created
+2017/02/11 13:34:33 - [ MailExtract.pm ] - INFO : Mail folder ../../MailDir contains 5 messages
+2017/02/11 13:34:33 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:33 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:33 - [ Storage.pm ] - INFO : folder name :../../Storage/20000209154405.C265@better.net
+2017/02/11 13:34:33 - [ Storage.pm ] - DEBUG : Creating folder:20000209154405.C265@better.net
+2017/02/11 13:34:33 - [ Storage.pm ] - INFO : created folder :../../Storage/20000209154405.C265@better.net
+2017/02/11 13:34:33 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:33 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:33 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:33 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:33 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:33 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:37 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : folder name :../../Storage/20021210110736.GA32736@deep-dark-truthful-mirror.pad
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Creating folder:20021210110736.GA32736@deep-dark-truthful-mirror.pad
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : created folder :../../Storage/20021210110736.GA32736@deep-dark-truthful-mirror.pad
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-1
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-2
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-3
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Attachment Id is :20021210110736.GA32736@deep-dark-truthful-mirror.pad-ERROR-4
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing attachment to file 
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:37 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : folder name :../../Storage/200002092200.RAA19561@mailfw3.ford.com
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Creating folder:200002092200.RAA19561@mailfw3.ford.com
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : created folder :../../Storage/200002092200.RAA19561@mailfw3.ford.com
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:37 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : folder name :../../Storage/20000704123347.F2009@atcmpg.ATComputing.nl
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Creating folder:20000704123347.F2009@atcmpg.ATComputing.nl
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : created folder :../../Storage/20000704123347.F2009@atcmpg.ATComputing.nl
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:37 - [ MailExtract.pm ] - INFO : message body decoded
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : creating folder for message
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : folder name :../../Storage/20000807113844.A22119@atcmpg.ATComputing.nl
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Creating folder:20000807113844.A22119@atcmpg.ATComputing.nl
+2017/02/11 13:34:37 - [ Storage.pm ] - INFO : created folder :../../Storage/20000807113844.A22119@atcmpg.ATComputing.nl
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : filtering the object for serialization
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing now
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Serializing completed
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Object Serialize completed
+2017/02/11 13:34:37 - [ Storage.pm ] - DEBUG : Writing message body to file :body.txt
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Finished updating Manifest : mappings.yaml
+2017/02/11 13:34:37 - [ MailExtract.pm ] - INFO : All messages have been handled
+2017/02/11 13:34:37 - [ MailExtract.pm ] - ERROR : Error occured in init of maildir : 
+2017/02/11 13:34:37 - [ MailExtract.pm ] - DEBUG : Initalization complete: Object is ready
+2017/02/11 13:34:37 - [ Service.pm ] - INFO : Service ended successfully
+2017/02/11 13:34:37 - [ Service.pm ] - INFO : --------------------------------------------------------------
+
