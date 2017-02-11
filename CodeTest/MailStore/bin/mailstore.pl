@@ -89,7 +89,6 @@ sub main {
 sub usage {
     print <<'USAGE';
 
-mailstore v$MailStore::VERSION
 About: Command-line client for MailStore project
 Usage: mailstore [options]
 
