@@ -80,7 +80,7 @@ Future Enhancements I can think of
 1) Provide better POD documentation
 2) Handling duplicate messages (may be keep duplicates or a flag to indicate duplicate)
 3) Signal Handling if the program is abruptly stopper/killed or support for the program to pause/resume
-4) To provide progress of the copy to the end user at real time
+4) To provide realtime progress of the work happening.
 5) Support for multiple instances running at the same time
 6) Log rotation everyday or for everyrun
 7) Better command line report using either Text::Table or Perl6::Form
