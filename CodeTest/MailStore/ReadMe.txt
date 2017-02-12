@@ -74,3 +74,17 @@ CodeTest/
           |-> MYMETA.json
           |-> MYMETA.yaml
           |-> ReadMe.txt
+
+Future Enhancements I can think of
+-----------------------------------
+1) Provide better POD documentation
+2) Handling duplicate messages (may be keep duplicates or a flag to indicate duplicate)
+3) Signal Handling if the program is abruptly stopper/killed or support for the program to pause/resume
+4) To provide progress of the copy to the end user at real time
+5) Support for multiple instances running at the same time
+6) Log rotation everyday or for everyrun
+7) Better command line report using either Text::Table or Perl6::Form
+8) Improve the performance using ForkManager by running multi processes.
+9) Creating MD5 hash from messageId instead of using messageId for folder creation
+10) Remove messages after copy is completed
+11) Archiving the attachments
