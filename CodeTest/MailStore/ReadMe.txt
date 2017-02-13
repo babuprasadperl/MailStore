@@ -13,9 +13,6 @@ http://www.courier-mta.org/maildir.html
 http://www.courier-mta.org/maildirmake.html
 I used maildirmake command to create files in maildir folders
 
-It was difficult to find proper mail messages that is stored in mail servers,
-So, I finally got some messages from the test data provided by mailbox modules in CPAN
-It was even more difficult to find messages with multipart data and that too attachments 'OMG' :-(
 
 Structure of project
 ---------------------
