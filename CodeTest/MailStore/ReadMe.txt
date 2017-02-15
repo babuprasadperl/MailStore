@@ -97,6 +97,21 @@ CodeTest/
           |-> MYMETA.yaml
           |-> ReadMe.txt
 
+Perl Standards
+--------------
+1.	All modules are fully object-oriented implemented using Moose
+2.	Ran perlcritic level 3 (Harsh) for all modules/test scripts/program
+3.	Ran perltidy for all modules/scripts/program
+4.	For unit testing, I have created runall.t file that recursively runs all test scripts and gives summary result.
+5.	There are no hardcoded values, all parameters will be picked up from config files located under MailStore/etc
+6.	Logging used, which writes the log to MailStore/log/app.log file
+7.	Implemented singleton for config and logger.
+8.	Manifest file is written in YAML format
+9.	Implemented Build using Module::Build for the project. This is to facilitate ease of use to download and install the libraries.  “perl Build.PL and ./build installdeps”
+10.	Executable scripts are kept under /bin folder
+11.	Introduced proper comments wherever required in all modules
+
+
 Future Enhancements I can think of
 -----------------------------------
 1) Provide better POD documentation
