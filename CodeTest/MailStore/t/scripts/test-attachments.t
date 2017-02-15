@@ -12,10 +12,12 @@ BEGIN {
 use_ok('MailStore::MailExtract');
 use_ok('MailStore::Common::Config');
 
-#my $extract = MailStore::MailExtract->new(
+# It runs MailExtract
+#  should be enabled when you do modifications to code
+# my $extract = MailStore::MailExtract->new(
 #    source  => "$Bin/../data/input/",
 #    storage => "../data/output/"
-#);
+# );
 
 my $mgr = Mail::Box::Manager->new;
 my $folder = $mgr->open( folder => "$Bin/../data/input/" ) or die "Can't read mail\n";

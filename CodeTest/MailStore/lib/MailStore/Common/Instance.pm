@@ -12,7 +12,6 @@ package MailStore::Common::Instance;
 # This module is derived by Config.pm and Logger.pm
 #
 use Moose::Role;
-use base 'Class::Singleton';
 
 #
 # Get the instance of the object
@@ -24,7 +23,6 @@ sub instance {
     return $existing if $existing;
 
     no strict 'refs';
-    no warnings 'once';
 
     return ${"$class\::singleton"} = $class->new(@args);
 }
