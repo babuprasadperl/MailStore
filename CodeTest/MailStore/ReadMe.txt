@@ -26,7 +26,7 @@ perl mailstore.pl --help
 (To display help)
 
 perl mailstore.pl --list 
-(you should run --list only after you run the script once. --list picks up the the messageIds from the created directories)
+(you should run --list only after you run the script once. --list picks up the the messageIds from the manifest file)
 
 perl mailstore.pl --message-id <messageId_of_message>
 (Prints all important details of the message on the screen)
