@@ -13,6 +13,31 @@ http://www.courier-mta.org/maildir.html
 http://www.courier-mta.org/maildirmake.html
 I used maildirmake command to create files in maildir folders
 
+How to use it:
+--------------
+cd MailStore/bin
+perl mailstore.pl
+(It picks up input and output dirs from the config file)
+
+perl mailstore.pl --mailstore mailstore
+(I am passing the input directory using --mailstore option)
+
+perl mailstore.pl --help
+(To display help)
+
+perl mailstore.pl --list 
+(you should run --list only after you run the script once. --list picks up the the messageIds from the created directories)
+
+perl mailstore.pl --message-id <messageId_of_message>
+(Prints all important details of the message on the screen)
+
+perl mailstore.pl --dir-path <directory_path_of_message_folder>
+(Prints all important details of the message on the screen)
+
+Note: To run testcases
+cd MailStore/t
+perl runall.t
+(runall.t recursively iterates through all folders and subfolders and runs the test scripts, finally prints the summary of test run)
 
 Structure of project
 ---------------------
